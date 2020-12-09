@@ -1,3 +1,3 @@
-# hello-world
+# Chess
 
-This is repository for code on Java
+This is repository chess app

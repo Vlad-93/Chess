@@ -1,0 +1,1046 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<StackPane prefHeight="150.0" prefWidth="200.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+    <GridPane fx:id="board" alignment="CENTER" maxHeight="800.0" maxWidth="800.0" minHeight="800.0" minWidth="800.0" prefHeight="800.0" prefWidth="800.0" rotate="270.0" style="-fx-background-color: #007f7fff;" StackPane.alignment="TOP_LEFT">
+        <columnConstraints>
+            <ColumnConstraints maxWidth="60.0" minWidth="60.0" prefWidth="60.0" />
+            <ColumnConstraints maxWidth="85.0" minWidth="85.0" prefWidth="85.0" />
+            <ColumnConstraints maxWidth="85.0" minWidth="85.0" prefWidth="85.0" />
+            <ColumnConstraints maxWidth="85.0" minWidth="85.0" prefWidth="85.0" />
+            <ColumnConstraints maxWidth="85.0" minWidth="85.0" prefWidth="85.0" />
+            <ColumnConstraints maxWidth="85.0" minWidth="85.0" prefWidth="85.0" />
+            <ColumnConstraints maxWidth="85.0" minWidth="85.0" prefWidth="85.0" />
+            <ColumnConstraints maxWidth="85.0" minWidth="85.0" prefWidth="85.0" />
+            <ColumnConstraints maxWidth="85.0" minWidth="85.0" prefWidth="85.0" />
+            <ColumnConstraints maxWidth="60.0" minWidth="60.0" prefWidth="60.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints maxHeight="60.0" prefHeight="60.0" />
+            <RowConstraints maxHeight="85.0" minHeight="85.0" prefHeight="85.0" />
+            <RowConstraints maxHeight="85.0" minHeight="85.0" prefHeight="85.0" />
+            <RowConstraints maxHeight="85.0" minHeight="85.0" prefHeight="85.0" />
+            <RowConstraints maxHeight="85.0" minHeight="85.0" prefHeight="85.0" />
+            <RowConstraints maxHeight="85.0" minHeight="85.0" prefHeight="85.0" />
+            <RowConstraints maxHeight="85.0" minHeight="85.0" prefHeight="85.0" />
+            <RowConstraints maxHeight="85.0" minHeight="85.0" prefHeight="85.0" />
+            <RowConstraints maxHeight="85.0" minHeight="85.0" prefHeight="85.0" />
+            <RowConstraints maxHeight="60.0" minHeight="60.0" prefHeight="60.0" />
+        </rowConstraints>
+        <Button fx:id="reverse1" alignment="CENTER" ellipsisString="" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#reverse1" prefHeight="60.0" prefWidth="60.0" rotate="270.0" style="-fx-background-color: orange;" text="↻" textAlignment="CENTER" textFill="BLUE">
+            <font>
+                <Font size="30.0" />
+            </font>
+            <cursor>
+                <Cursor fx:constant="OPEN_HAND" />
+            </cursor>
+        </Button>
+        <Label fx:id="A0" alignment="CENTER" ellipsisString="" prefHeight="60.0" prefWidth="60.0" rotate="90.0" text="A" textAlignment="CENTER" GridPane.rowIndex="1">
+            <font>
+                <Font size="40.0" />
+            </font>
+        </Label>
+        <Label fx:id="B0" alignment="CENTER" ellipsisString="" prefHeight="60.0" prefWidth="60.0" rotate="90.0" text="B" textAlignment="CENTER" GridPane.rowIndex="2">
+            <font>
+                <Font size="40.0" />
+            </font>
+        </Label>
+        <Label fx:id="C0" alignment="CENTER" ellipsisString="" prefHeight="60.0" prefWidth="60.0" rotate="90.0" text="C" textAlignment="CENTER" GridPane.rowIndex="3">
+            <font>
+                <Font size="40.0" />
+            </font>
+        </Label>
+        <Label fx:id="D0" alignment="CENTER" ellipsisString="" prefHeight="60.0" prefWidth="60.0" rotate="90.0" text="D" textAlignment="CENTER" GridPane.rowIndex="4">
+            <font>
+                <Font size="40.0" />
+            </font>
+        </Label>
+        <Label fx:id="E0" alignment="CENTER" ellipsisString="" prefHeight="60.0" prefWidth="60.0" rotate="90.0" text="E" textAlignment="CENTER" GridPane.rowIndex="5">
+            <font>
+                <Font size="40.0" />
+            </font>
+        </Label>
+        <Label fx:id="F0" alignment="CENTER" ellipsisString="" prefHeight="60.0" prefWidth="60.0" rotate="90.0" text="F" textAlignment="CENTER" GridPane.rowIndex="6">
+            <font>
+                <Font size="40.0" />
+            </font>
+        </Label>
+        <Label fx:id="G0" alignment="CENTER" ellipsisString="" prefHeight="60.0" prefWidth="60.0" rotate="90.0" text="G" textAlignment="CENTER" GridPane.rowIndex="7">
+            <font>
+                <Font size="40.0" />
+            </font>
+        </Label>
+        <Label fx:id="H0" alignment="CENTER" ellipsisString="" prefHeight="60.0" prefWidth="60.0" rotate="90.0" text="H" textAlignment="CENTER" GridPane.rowIndex="8">
+            <font>
+                <Font size="40.0" />
+            </font>
+        </Label>
+        <Label fx:id="Z1" alignment="CENTER" ellipsisString="" prefHeight="85.0" prefWidth="85.0" rotate="90.0" text="1" textAlignment="CENTER" GridPane.columnIndex="1">
+            <font>
+                <Font size="40.0" />
+            </font>
+            <GridPane.margin>
+                <Insets />
+            </GridPane.margin>
+        </Label>
+        <StackPane prefHeight="85.0" prefWidth="85.0" rotate="90.0" style="-fx-background-color: black;" GridPane.columnIndex="1" GridPane.rowIndex="1">
+            <Button fx:id="A1" alignment="CENTER" contentDisplay="CENTER" ellipsisString="" style="-fx-background-color: black;" text="   " textAlignment="CENTER">
+                <font>
+                    <Font size="40.0" />
+                </font>
+            </Button>
+            <ImageView fx:id="a1" fitHeight="85.0" fitWidth="85.0" onMouseClicked="#mouseClickedA1" pickOnBounds="true" preserveRatio="true">
+                <Image url="@../source/whiterook.png" />
+            </ImageView>
+        </StackPane>
+        <StackPane prefHeight="85.0" prefWidth="85.0" rotate="90.0" style="-fx-background-color: white;" GridPane.columnIndex="1" GridPane.rowIndex="2">
+            <Button fx:id="B1" alignment="CENTER" contentDisplay="CENTER" ellipsisString="" style="-fx-background-color: white;" text="   " textAlignment="CENTER">
+                <font>
+                    <Font size="40.0" />
+                </font>
+            </Button>
+            <ImageView fx:id="b1" fitHeight="85.0" fitWidth="85.0" onMouseClicked="#mouseClickedB1" pickOnBounds="true" preserveRatio="true">
+                <Image url="@../source/whiteknight.png" />
+            </ImageView>
+        </StackPane>
+        <StackPane prefHeight="85.0" prefWidth="85.0" rotate="90.0" style="-fx-background-color: black;" GridPane.columnIndex="1" GridPane.rowIndex="3">
+            <Button fx:id="C1" alignment="CENTER" contentDisplay="CENTER" ellipsisString="" style="-fx-background-color: black;" text="   " textAlignment="CENTER">
+                <font>
+                    <Font size="40.0" />
+                </font>
+            </Button>
+            <ImageView fx:id="c1" fitHeight="85.0" fitWidth="85.0" onMouseClicked="#mouseClickedC1" pickOnBounds="true" preserveRatio="true">
+                <Image url="@../source/whitebishop.png" />
+            </ImageView>
+        </StackPane>
+        <StackPane prefHeight="85.0" prefWidth="85.0" rotate="90.0" style="-fx-background-color: white;" GridPane.columnIndex="1" GridPane.rowIndex="4">
+            <Button fx:id="D1" alignment="CENTER" contentDisplay="CENTER" ellipsisString="" style="-fx-background-color: white;" text="   " textAlignment="CENTER">
+                <font>
+                    <Font size="40.0" />
+                </font>
+            </Button>
+            <ImageView fx:id="d1" fitHeight="85.0" fitWidth="85.0" onMouseClicked="#mouseClickedD1" pickOnBounds="true" preserveRatio="true">
+                <Image url="@../source/whitequeen.png" />
+            </ImageView>
+        </StackPane>
+        <StackPane prefHeight="85.0" prefWidth="85.0" rotate="90.0" style="-fx-background-color: black;" GridPane.columnIndex="1" GridPane.rowIndex="5">
+            <Button fx:id="E1" alignment="CENTER" contentDisplay="CENTER" ellipsisString="" style="-fx-background-color: black;" text="   " textAlignment="CENTER">
+                <font>
+                    <Font size="40.0" />
+                </font>
+            </Button>
+            <ImageView fx:id="e1" fitHeight="85.0" fitWidth="85.0" onMouseClicked="#mouseClickedE1" pickOnBounds="true" preserveRatio="true">
+                <Image url="@../source/whiteking.png" />
+            </ImageView>
+        </StackPane>
+        <StackPane prefHeight="85.0" prefWidth="85.0" rotate="90.0" style="-fx-background-color: white;" GridPane.columnIndex="1" GridPane.rowIndex="6">
+            <Button fx:id="F1" alignment="CENTER" contentDisplay="CENTER" ellipsisString="" style="-fx-background-color: white;" text="   " textAlignment="CENTER">
+                <font>
+                    <Font size="40.0" />
+                </font>
+            </Button>
+            <ImageView fx:id="f1" fitHeight="85.0" fitWidth="85.0" onMouseClicked="#mouseClickedF1" pickOnBounds="true" preserveRatio="true">
+                <Image url="@../source/whitebishop.png" />
+            </ImageView>
+        </StackPane>
+        <StackPane prefHeight="85.0" prefWidth="85.0" rotate="90.0" style="-fx-background-color: black;" GridPane.columnIndex="1" GridPane.rowIndex="7">
+            <Button fx:id="G1" alignment="CENTER" contentDisplay="CENTER" ellipsisString="" style="-fx-background-color: black;" text="   " textAlignment="CENTER">
+                <font>
+                    <Font size="40.0" />
+                </font>
+            </Button>
+            <ImageView fx:id="g1" fitHeight="85.0" fitWidth="85.0" onMouseClicked="#mouseClickedG1" pickOnBounds="true" preserveRatio="true">
+                <Image url="@../source/whiteknight.png" />
+            </ImageView>
+        </StackPane>
+        <StackPane prefHeight="85.0" prefWidth="85.0" rotate="90.0" style="-fx-background-color: white;" GridPane.columnIndex="1" GridPane.rowIndex="8">
+            <Button fx:id="H1" alignment="CENTER" contentDisplay="CENTER" ellipsisString="" style="-fx-background-color: white;" text="   " textAlignment="CENTER">
+                <font>
+                    <Font size="40.0" />
+                </font>
+            </Button>
+            <ImageView fx:id="h1" fitHeight="85.0" fitWidth="85.0" onMouseClicked="#mouseClickedH1" pickOnBounds="true" preserveRatio="true">
+                <Image url="@../source/whiterook.png" />
+            </ImageView>
+        </StackPane>
+        <Label fx:id="I1" alignment="CENTER" contentDisplay="CENTER" ellipsisString="" prefHeight="85.0" prefWidth="85.0" rotate="90.0" text="1" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="9">
+            <font>
+                <Font size="40.0" />
+            </font>
+            <GridPane.margin>
+                <Insets />
+            </GridPane.margin>
+        </Label>
+        <Label fx:id="Z2" alignment="CENTER" ellipsisString="" prefHeight="85.0" prefWidth="85.0" rotate="90.0" text="2" textAlignment="CENTER" GridPane.columnIndex="2">
+            <font>
+                <Font size="40.0" />
+            </font>
+            <GridPane.margin>
+                <Insets />
+            </GridPane.margin>
+        </Label>
+        <StackPane prefHeight="85.0" prefWidth="85.0" rotate="90.0" style="-fx-background-color: white;" GridPane.columnIndex="2" GridPane.rowIndex="1">
+            <Button fx:id="A2" alignment="CENTER" contentDisplay="CENTER" ellipsisString="" style="-fx-background-color: white;" text="   " textAlignment="CENTER">
+                <font>
+                    <Font size="40.0" />
+                </font>
+            </Button>
+            <ImageView fx:id="a2" fitHeight="85.0" fitWidth="85.0" onMouseClicked="#mouseClickedA2" pickOnBounds="true" preserveRatio="true">
+                <Image url="@../source/whitepawn.png" />
+            </ImageView>
+        </StackPane>
+        <StackPane prefHeight="85.0" prefWidth="85.0" rotate="90.0" style="-fx-background-color: black;" GridPane.columnIndex="2" GridPane.rowIndex="2">
+            <Button fx:id="B2" alignment="CENTER" contentDisplay="CENTER" ellipsisString="" style="-fx-background-color: black;" text="   " textAlignment="CENTER">
+                <font>
+                    <Font size="40.0" />
+                </font>
+            </Button>
+            <ImageView fx:id="b2" fitHeight="85.0" fitWidth="85.0" onMouseClicked="#mouseClickedB2" pickOnBounds="true" preserveRatio="true">
+                <Image url="@../source/whitepawn.png" />
+            </ImageView>
+        </StackPane>
+        <StackPane prefHeight="85.0" prefWidth="85.0" rotate="90.0" style="-fx-background-color: white;" GridPane.columnIndex="2" GridPane.rowIndex="3">
+            <Button fx:id="C2" alignment="CENTER" contentDisplay="CENTER" ellipsisString="" style="-fx-background-color: white;" text="   " textAlignment="CENTER">
+                <font>
+                    <Font size="40.0" />
+                </font>
+            </Button>
+            <ImageView fx:id="c2" fitHeight="85.0" fitWidth="85.0" onMouseClicked="#mouseClickedC2" pickOnBounds="true" preserveRatio="true">
+                <Image url="@../source/whitepawn.png" />
+            </ImageView>
+        </StackPane>
+        <StackPane prefHeight="85.0" prefWidth="85.0" rotate="90.0" style="-fx-background-color: black;" GridPane.columnIndex="2" GridPane.rowIndex="4">
+            <Button fx:id="D2" alignment="CENTER" contentDisplay="CENTER" ellipsisString="" style="-fx-background-color: black;" text="   " textAlignment="CENTER">
+                <font>
+                    <Font size="40.0" />
+                </font>
+            </Button>
+            <ImageView fx:id="d2" fitHeight="85.0" fitWidth="85.0" onMouseClicked="#mouseClickedD2" pickOnBounds="true" preserveRatio="true">
+                <Image url="@../source/whitepawn.png" />
+            </ImageView>
+        </StackPane>
+        <StackPane prefHeight="85.0" prefWidth="85.0" rotate="90.0" style="-fx-background-color: white;" GridPane.columnIndex="2" GridPane.rowIndex="5">
+            <Button fx:id="E2" alignment="CENTER" contentDisplay="CENTER" ellipsisString="" style="-fx-background-color: white;" text="   " textAlignment="CENTER">
+                <font>
+                    <Font size="40.0" />
+                </font>
+            </Button>
+            <ImageView fx:id="e2" fitHeight="85.0" fitWidth="85.0" onMouseClicked="#mouseClickedE2" pickOnBounds="true" preserveRatio="true">
+                <Image url="@../source/whitepawn.png" />
+            </ImageView>
+        </StackPane>
+        <StackPane prefHeight="85.0" prefWidth="85.0" rotate="90.0" style="-fx-background-color: black;" GridPane.columnIndex="2" GridPane.rowIndex="6">
+            <Button fx:id="F2" alignment="CENTER" contentDisplay="CENTER" ellipsisString="" style="-fx-background-color: black;" text="   " textAlignment="CENTER">
+                <font>
+                    <Font size="40.0" />
+                </font>
+            </Button>
+            <ImageView fx:id="f2" fitHeight="85.0" fitWidth="85.0" onMouseClicked="#mouseClickedF2" pickOnBounds="true" preserveRatio="true">
+                <Image url="@../source/whitepawn.png" />
+            </ImageView>
+        </StackPane>
+        <StackPane prefHeight="85.0" prefWidth="85.0" rotate="90.0" style="-fx-background-color: white;" GridPane.columnIndex="2" GridPane.rowIndex="7">
+            <Button fx:id="G2" alignment="CENTER" contentDisplay="CENTER" ellipsisString="" style="-fx-background-color: white;" text="   " textAlignment="CENTER">
+                <font>
+                    <Font size="40.0" />
+                </font>
+            </Button>
+            <ImageView fx:id="g2" fitHeight="85.0" fitWidth="85.0" onMouseClicked="#mouseClickedG2" pickOnBounds="true" preserveRatio="true">
+                <Image url="@../source/whitepawn.png" />
+            </ImageView>
+        </StackPane>
+        <StackPane prefHeight="85.0" prefWidth="85.0" rotate="90.0" style="-fx-background-color: black;" GridPane.columnIndex="2" GridPane.rowIndex="8">
+            <Button fx:id="H2" alignment="CENTER" contentDisplay="CENTER" ellipsisString="" style="-fx-background-color: black;" text="   " textAlignment="CENTER">
+                <font>
+                    <Font size="40.0" />
+                </font>
+            </Button>
+            <ImageView fx:id="h2" fitHeight="85.0" fitWidth="85.0" onMouseClicked="#mouseClickedH2" pickOnBounds="true" preserveRatio="true">
+                <Image url="@../source/whitepawn.png" />
+            </ImageView>
+        </StackPane>
+        <Label fx:id="I2" alignment="CENTER" ellipsisString="" prefHeight="85.0" prefWidth="85.0" rotate="90.0" text="2" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.rowIndex="9">
+            <font>
+                <Font size="40.0" />
+            </font>
+            <GridPane.margin>
+                <Insets />
+            </GridPane.margin>
+        </Label>
+        <Label fx:id="Z3" alignment="CENTER" ellipsisString="" prefHeight="85.0" prefWidth="85.0" rotate="90.0" text="3" textAlignment="CENTER" GridPane.columnIndex="3">
+            <font>
+                <Font size="40.0" />
+            </font>
+            <GridPane.margin>
+                <Insets />
+            </GridPane.margin>
+        </Label>
+        <StackPane prefHeight="85.0" prefWidth="85.0" rotate="90.0" style="-fx-background-color: black;" GridPane.columnIndex="3" GridPane.rowIndex="1">
+            <Button fx:id="A3" alignment="CENTER" contentDisplay="CENTER" ellipsisString="" style="-fx-background-color: black;" text="   " textAlignment="CENTER">
+                <font>
+                    <Font size="40.0" />
+                </font>
+            </Button>
+            <ImageView fx:id="a3" fitHeight="85.0" fitWidth="85.0" onMouseClicked="#mouseClickedA3" pickOnBounds="true" preserveRatio="true">
+            </ImageView>
+        </StackPane>
+        <StackPane prefHeight="85.0" prefWidth="85.0" rotate="90.0" style="-fx-background-color: white;" GridPane.columnIndex="3" GridPane.rowIndex="2">
+            <Button fx:id="B3" alignment="CENTER" contentDisplay="CENTER" ellipsisString="" style="-fx-background-color: white;" text="   " textAlignment="CENTER">
+                <font>
+                    <Font size="40.0" />
+                </font>
+            </Button>
+            <ImageView fx:id="b3" fitHeight="85.0" fitWidth="85.0" onMouseClicked="#mouseClickedB3" pickOnBounds="true" preserveRatio="true">
+            </ImageView>
+        </StackPane>
+        <StackPane prefHeight="85.0" prefWidth="85.0" rotate="90.0" style="-fx-background-color: black;" GridPane.columnIndex="3" GridPane.rowIndex="3">
+            <Button fx:id="C3" alignment="CENTER" contentDisplay="CENTER" ellipsisString="" style="-fx-background-color: black;" text="   " textAlignment="CENTER">
+                <font>
+                    <Font size="40.0" />
+                </font>
+            </Button>
+            <ImageView fx:id="c3" fitHeight="85.0" fitWidth="85.0" onMouseClicked="#mouseClickedC3" pickOnBounds="true" preserveRatio="true">
+            </ImageView>
+        </StackPane>
+        <StackPane prefHeight="85.0" prefWidth="85.0" rotate="90.0" style="-fx-background-color: white;" GridPane.columnIndex="3" GridPane.rowIndex="4">
+            <Button fx:id="D3" alignment="CENTER" contentDisplay="CENTER" ellipsisString="" style="-fx-background-color: white;" text="   " textAlignment="CENTER">
+                <font>
+                    <Font size="40.0" />
+                </font>
+            </Button>
+            <ImageView fx:id="d3" fitHeight="85.0" fitWidth="85.0" onMouseClicked="#mouseClickedD3" pickOnBounds="true" preserveRatio="true">
+            </ImageView>
+        </StackPane>
+        <StackPane prefHeight="85.0" prefWidth="85.0" rotate="90.0" style="-fx-background-color: black;" GridPane.columnIndex="3" GridPane.rowIndex="5">
+            <Button fx:id="E3" alignment="CENTER" contentDisplay="CENTER" ellipsisString="" style="-fx-background-color: black;" text="   " textAlignment="CENTER">
+                <font>
+                    <Font size="40.0" />
+                </font>
+            </Button>
+            <ImageView fx:id="e3" fitHeight="85.0" fitWidth="85.0" onMouseClicked="#mouseClickedE3" pickOnBounds="true" preserveRatio="true">
+            </ImageView>
+        </StackPane>
+        <StackPane prefHeight="85.0" prefWidth="85.0" rotate="90.0" style="-fx-background-color: white;" GridPane.columnIndex="3" GridPane.rowIndex="6">
+            <Button fx:id="F3" alignment="CENTER" contentDisplay="CENTER" ellipsisString="" style="-fx-background-color: white;" text="   " textAlignment="CENTER">
+                <font>
+                    <Font size="40.0" />
+                </font>
+            </Button>
+            <ImageView fx:id="f3" fitHeight="85.0" fitWidth="85.0" onMouseClicked="#mouseClickedF3" pickOnBounds="true" preserveRatio="true">
+            </ImageView>
+        </StackPane>
+        <StackPane prefHeight="85.0" prefWidth="85.0" rotate="90.0" style="-fx-background-color: black;" GridPane.columnIndex="3" GridPane.rowIndex="7">
+            <Button fx:id="G3" alignment="CENTER" contentDisplay="CENTER" ellipsisString="" style="-fx-background-color: black;" text="   " textAlignment="CENTER">
+                <font>
+                    <Font size="40.0" />
+                </font>
+            </Button>
+            <ImageView fx:id="g3" fitHeight="85.0" fitWidth="85.0" onMouseClicked="#mouseClickedG3" pickOnBounds="true" preserveRatio="true">
+            </ImageView>
+        </StackPane>
+        <StackPane prefHeight="85.0" prefWidth="85.0" rotate="90.0" style="-fx-background-color: white;" GridPane.columnIndex="3" GridPane.rowIndex="8">
+            <Button fx:id="H3" alignment="CENTER" contentDisplay="CENTER" ellipsisString="" style="-fx-background-color: white;" text="   " textAlignment="CENTER">
+                <font>
+                    <Font size="40.0" />
+                </font>
+            </Button>
+            <ImageView fx:id="h3" fitHeight="85.0" fitWidth="85.0" onMouseClicked="#mouseClickedH3" pickOnBounds="true" preserveRatio="true">
+            </ImageView>
+        </StackPane>
+        <Label fx:id="I3" alignment="CENTER" ellipsisString="" prefHeight="85.0" prefWidth="85.0" rotate="90.0" text="3" textAlignment="CENTER" GridPane.columnIndex="3" GridPane.rowIndex="9">
+            <font>
+                <Font size="40.0" />
+            </font>
+            <GridPane.margin>
+                <Insets />
+            </GridPane.margin>
+        </Label>
+        <Label fx:id="Z4" alignment="CENTER" ellipsisString="" prefHeight="85.0" prefWidth="85.0" rotate="90.0" text="4" textAlignment="CENTER" GridPane.columnIndex="4">
+            <font>
+                <Font size="40.0" />
+            </font>
+            <GridPane.margin>
+                <Insets />
+            </GridPane.margin>
+        </Label>
+        <StackPane prefHeight="85.0" prefWidth="85.0" rotate="90.0" style="-fx-background-color: white;" GridPane.columnIndex="4" GridPane.rowIndex="1">
+            <Button fx:id="A4" alignment="CENTER" contentDisplay="CENTER" ellipsisString="" style="-fx-background-color: white;" text="   " textAlignment="CENTER">
+                <font>
+                    <Font size="40.0" />
+                </font>
+            </Button>
+            <ImageView fx:id="a4" fitHeight="85.0" fitWidth="85.0" onMouseClicked="#mouseClickedA4" pickOnBounds="true" preserveRatio="true">
+            </ImageView>
+        </StackPane>
+        <StackPane prefHeight="85.0" prefWidth="85.0" rotate="90.0" style="-fx-background-color: black;" GridPane.columnIndex="4" GridPane.rowIndex="2">
+            <Button fx:id="B4" alignment="CENTER" contentDisplay="CENTER" ellipsisString="" style="-fx-background-color: black;" text="   " textAlignment="CENTER">
+                <font>
+                    <Font size="40.0" />
+                </font>
+            </Button>
+            <ImageView fx:id="b4" fitHeight="85.0" fitWidth="85.0" onMouseClicked="#mouseClickedB4" pickOnBounds="true" preserveRatio="true">
+            </ImageView>
+        </StackPane>
+        <StackPane prefHeight="85.0" prefWidth="85.0" rotate="90.0" style="-fx-background-color: white;" GridPane.columnIndex="4" GridPane.rowIndex="3">
+            <Button fx:id="C4" alignment="CENTER" contentDisplay="CENTER" ellipsisString="" style="-fx-background-color: white;" text="   " textAlignment="CENTER">
+                <font>
+                    <Font size="40.0" />
+                </font>
+            </Button>
+            <ImageView fx:id="c4" fitHeight="85.0" fitWidth="85.0" onMouseClicked="#mouseClickedC4" pickOnBounds="true" preserveRatio="true">
+            </ImageView>
+        </StackPane>
+        <StackPane prefHeight="85.0" prefWidth="85.0" rotate="90.0" style="-fx-background-color: black;" GridPane.columnIndex="4" GridPane.rowIndex="4">
+            <Button fx:id="D4" alignment="CENTER" contentDisplay="CENTER" ellipsisString="" style="-fx-background-color: black;" text="   " textAlignment="CENTER">
+                <font>
+                    <Font size="40.0" />
+                </font>
+            </Button>
+            <ImageView fx:id="d4" fitHeight="85.0" fitWidth="85.0" onMouseClicked="#mouseClickedD4" pickOnBounds="true" preserveRatio="true">
+            </ImageView>
+        </StackPane>
+        <StackPane prefHeight="85.0" prefWidth="85.0" rotate="90.0" style="-fx-background-color: white;" GridPane.columnIndex="4" GridPane.rowIndex="5">
+            <Button fx:id="E4" alignment="CENTER" contentDisplay="CENTER" ellipsisString="" style="-fx-background-color: white;" text="   " textAlignment="CENTER">
+                <font>
+                    <Font size="40.0" />
+                </font>
+            </Button>
+            <ImageView fx:id="e4" fitHeight="85.0" fitWidth="85.0" onMouseClicked="#mouseClickedE4" pickOnBounds="true" preserveRatio="true">
+            </ImageView>
+        </StackPane>
+        <StackPane prefHeight="85.0" prefWidth="85.0" rotate="90.0" style="-fx-background-color: black;" GridPane.columnIndex="4" GridPane.rowIndex="6">
+            <Button fx:id="F4" alignment="CENTER" contentDisplay="CENTER" ellipsisString="" style="-fx-background-color: black;" text="   " textAlignment="CENTER">
+                <font>
+                    <Font size="40.0" />
+                </font>
+            </Button>
+            <ImageView fx:id="f4" fitHeight="85.0" fitWidth="85.0" onMouseClicked="#mouseClickedF4" pickOnBounds="true" preserveRatio="true">
+            </ImageView>
+        </StackPane>
+        <StackPane prefHeight="85.0" prefWidth="85.0" rotate="90.0" style="-fx-background-color: white;" GridPane.columnIndex="4" GridPane.rowIndex="7">
+            <Button fx:id="G4" alignment="CENTER" contentDisplay="CENTER" ellipsisString="" style="-fx-background-color: white;" text="   " textAlignment="CENTER">
+                <font>
+                    <Font size="40.0" />
+                </font>
+            </Button>
+            <ImageView fx:id="g4" fitHeight="85.0" fitWidth="85.0" onMouseClicked="#mouseClickedG4" pickOnBounds="true" preserveRatio="true">
+            </ImageView>
+        </StackPane>
+        <StackPane prefHeight="85.0" prefWidth="85.0" rotate="90.0" style="-fx-background-color: black;" GridPane.columnIndex="4" GridPane.rowIndex="8">
+            <Button fx:id="H4" alignment="CENTER" contentDisplay="CENTER" ellipsisString="" style="-fx-background-color: black;" text="   " textAlignment="CENTER">
+                <font>
+                    <Font size="40.0" />
+                </font>
+            </Button>
+            <ImageView fx:id="h4" fitHeight="85.0" fitWidth="85.0" onMouseClicked="#mouseClickedH4" pickOnBounds="true" preserveRatio="true">
+            </ImageView>
+        </StackPane>
+        <Label fx:id="I4" alignment="CENTER" ellipsisString="" prefHeight="85.0" prefWidth="85.0" rotate="90.0" text="4" textAlignment="CENTER" GridPane.columnIndex="4" GridPane.rowIndex="9">
+            <font>
+                <Font size="40.0" />
+            </font>
+            <GridPane.margin>
+                <Insets />
+            </GridPane.margin>
+        </Label>
+        <Label fx:id="Z5" alignment="CENTER" ellipsisString="" prefHeight="85.0" prefWidth="85.0" rotate="90.0" text="5" textAlignment="CENTER" GridPane.columnIndex="5">
+            <font>
+                <Font size="40.0" />
+            </font>
+            <GridPane.margin>
+                <Insets />
+            </GridPane.margin>
+        </Label>
+        <StackPane prefHeight="85.0" prefWidth="85.0" rotate="90.0" style="-fx-background-color: black;" GridPane.columnIndex="5" GridPane.rowIndex="1">
+            <Button fx:id="A5" alignment="CENTER" contentDisplay="CENTER" ellipsisString="" style="-fx-background-color: black;" text="   " textAlignment="CENTER">
+                <font>
+                    <Font size="40.0" />
+                </font>
+            </Button>
+            <ImageView fx:id="a5" fitHeight="85.0" fitWidth="85.0" onMouseClicked="#mouseClickedA5" pickOnBounds="true" preserveRatio="true">
+            </ImageView>
+        </StackPane>
+        <StackPane prefHeight="85.0" prefWidth="85.0" rotate="90.0" style="-fx-background-color: white;" GridPane.columnIndex="5" GridPane.rowIndex="2">
+            <Button fx:id="B5" alignment="CENTER" contentDisplay="CENTER" ellipsisString="" style="-fx-background-color: white;" text="   " textAlignment="CENTER">
+                <font>
+                    <Font size="40.0" />
+                </font>
+            </Button>
+            <ImageView fx:id="b5" fitHeight="85.0" fitWidth="85.0" onMouseClicked="#mouseClickedB5" pickOnBounds="true" preserveRatio="true">
+            </ImageView>
+        </StackPane>
+        <StackPane prefHeight="85.0" prefWidth="85.0" rotate="90.0" style="-fx-background-color: black;" GridPane.columnIndex="5" GridPane.rowIndex="3">
+            <Button fx:id="C5" alignment="CENTER" contentDisplay="CENTER" ellipsisString="" style="-fx-background-color: black;" text="   " textAlignment="CENTER">
+                <font>
+                    <Font size="40.0" />
+                </font>
+            </Button>
+            <ImageView fx:id="c5" fitHeight="85.0" fitWidth="85.0" onMouseClicked="#mouseClickedC5" pickOnBounds="true" preserveRatio="true">
+            </ImageView>
+        </StackPane>
+        <StackPane prefHeight="85.0" prefWidth="85.0" rotate="90.0" style="-fx-background-color: white;" GridPane.columnIndex="5" GridPane.rowIndex="4">
+            <Button fx:id="D5" alignment="CENTER" contentDisplay="CENTER" ellipsisString="" style="-fx-background-color: white;" text="   " textAlignment="CENTER">
+                <font>
+                    <Font size="40.0" />
+                </font>
+            </Button>
+            <ImageView fx:id="d5" fitHeight="85.0" fitWidth="85.0" onMouseClicked="#mouseClickedD5" pickOnBounds="true" preserveRatio="true">
+            </ImageView>
+        </StackPane>
+        <StackPane prefHeight="85.0" prefWidth="85.0" rotate="90.0" style="-fx-background-color: black;" GridPane.columnIndex="5" GridPane.rowIndex="5">
+            <Button fx:id="E5" alignment="CENTER" contentDisplay="CENTER" ellipsisString="" style="-fx-background-color: black;" text="   " textAlignment="CENTER">
+                <font>
+                    <Font size="40.0" />
+                </font>
+            </Button>
+            <ImageView fx:id="e5" fitHeight="85.0" fitWidth="85.0" onMouseClicked="#mouseClickedE5" pickOnBounds="true" preserveRatio="true">
+            </ImageView>
+        </StackPane>
+        <StackPane prefHeight="85.0" prefWidth="85.0" rotate="90.0" style="-fx-background-color: white;" GridPane.columnIndex="5" GridPane.rowIndex="6">
+            <Button fx:id="F5" alignment="CENTER" contentDisplay="CENTER" ellipsisString="" style="-fx-background-color: white;" text="   " textAlignment="CENTER">
+                <font>
+                    <Font size="40.0" />
+                </font>
+            </Button>
+            <ImageView fx:id="f5" fitHeight="85.0" fitWidth="85.0" onMouseClicked="#mouseClickedF5" pickOnBounds="true" preserveRatio="true">
+            </ImageView>
+        </StackPane>
+        <StackPane prefHeight="85.0" prefWidth="85.0" rotate="90.0" style="-fx-background-color: black;" GridPane.columnIndex="5" GridPane.rowIndex="7">
+            <Button fx:id="G5" alignment="CENTER" contentDisplay="CENTER" ellipsisString="" style="-fx-background-color: black;" text="   " textAlignment="CENTER">
+                <font>
+                    <Font size="40.0" />
+                </font>
+            </Button>
+            <ImageView fx:id="g5" fitHeight="85.0" fitWidth="85.0" onMouseClicked="#mouseClickedG5" pickOnBounds="true" preserveRatio="true">
+            </ImageView>
+        </StackPane>
+        <StackPane prefHeight="85.0" prefWidth="85.0" rotate="90.0" style="-fx-background-color: white;" GridPane.columnIndex="5" GridPane.rowIndex="8">
+            <Button fx:id="H5" alignment="CENTER" contentDisplay="CENTER" ellipsisString="" style="-fx-background-color: white;" text="   " textAlignment="CENTER">
+                <font>
+                    <Font size="40.0" />
+                </font>
+            </Button>
+            <ImageView fx:id="h5" fitHeight="85.0" fitWidth="85.0" onMouseClicked="#mouseClickedH5" pickOnBounds="true" preserveRatio="true">
+            </ImageView>
+        </StackPane>
+        <Label fx:id="I5" alignment="CENTER" ellipsisString="" prefHeight="85.0" prefWidth="85.0" rotate="90.0" text="5" textAlignment="CENTER" GridPane.columnIndex="5" GridPane.rowIndex="9">
+            <font>
+                <Font size="40.0" />
+            </font>
+            <GridPane.margin>
+                <Insets />
+            </GridPane.margin>
+        </Label>
+        <Label fx:id="Z6" alignment="CENTER" ellipsisString="" prefHeight="85.0" prefWidth="85.0" rotate="90.0" text="6" textAlignment="CENTER" GridPane.columnIndex="6">
+            <font>
+                <Font size="40.0" />
+            </font>
+            <GridPane.margin>
+                <Insets />
+            </GridPane.margin>
+        </Label>
+        <StackPane prefHeight="85.0" prefWidth="85.0" rotate="90.0" style="-fx-background-color: white;" GridPane.columnIndex="6" GridPane.rowIndex="1">
+            <Button fx:id="A6" alignment="CENTER" contentDisplay="CENTER" ellipsisString="" style="-fx-background-color: white;" text="   " textAlignment="CENTER">
+                <font>
+                    <Font size="40.0" />
+                </font>
+            </Button>
+            <ImageView fx:id="a6" fitHeight="85.0" fitWidth="85.0" onMouseClicked="#mouseClickedA6" pickOnBounds="true" preserveRatio="true">
+            </ImageView>
+        </StackPane>
+        <StackPane prefHeight="85.0" prefWidth="85.0" rotate="90.0" style="-fx-background-color: black;" GridPane.columnIndex="6" GridPane.rowIndex="2">
+            <Button fx:id="B6" alignment="CENTER" contentDisplay="CENTER" ellipsisString="" style="-fx-background-color: black;" text="   " textAlignment="CENTER">
+                <font>
+                    <Font size="40.0" />
+                </font>
+            </Button>
+            <ImageView fx:id="b6" fitHeight="85.0" fitWidth="85.0" onMouseClicked="#mouseClickedB6" pickOnBounds="true" preserveRatio="true">
+            </ImageView>
+        </StackPane>
+        <StackPane prefHeight="85.0" prefWidth="85.0" rotate="90.0" style="-fx-background-color: white;" GridPane.columnIndex="6" GridPane.rowIndex="3">
+            <Button fx:id="C6" alignment="CENTER" contentDisplay="CENTER" ellipsisString="" style="-fx-background-color: white;" text="   " textAlignment="CENTER">
+                <font>
+                    <Font size="40.0" />
+                </font>
+            </Button>
+            <ImageView fx:id="c6" fitHeight="85.0" fitWidth="85.0" onMouseClicked="#mouseClickedC6" pickOnBounds="true" preserveRatio="true">
+            </ImageView>
+        </StackPane>
+        <StackPane prefHeight="85.0" prefWidth="85.0" rotate="90.0" style="-fx-background-color: black;" GridPane.columnIndex="6" GridPane.rowIndex="4">
+            <Button fx:id="D6" alignment="CENTER" contentDisplay="CENTER" ellipsisString="" style="-fx-background-color: black;" text="   " textAlignment="CENTER">
+                <font>
+                    <Font size="40.0" />
+                </font>
+            </Button>
+            <ImageView fx:id="d6" fitHeight="85.0" fitWidth="85.0" onMouseClicked="#mouseClickedD6" pickOnBounds="true" preserveRatio="true">
+            </ImageView>
+        </StackPane>
+        <StackPane prefHeight="85.0" prefWidth="85.0" rotate="90.0" style="-fx-background-color: white;" GridPane.columnIndex="6" GridPane.rowIndex="5">
+
+            <Button fx:id="E6" alignment="CENTER" contentDisplay="CENTER" ellipsisString="" style="-fx-background-color: white;" text="   " textAlignment="CENTER">
+                <font>
+                    <Font size="40.0" />
+                </font>
+            </Button>
+            <ImageView fx:id="e6" fitHeight="85.0" fitWidth="85.0" onMouseClicked="#mouseClickedE6" pickOnBounds="true" preserveRatio="true">
+            </ImageView>
+
+        </StackPane>
+        <StackPane prefHeight="85.0" prefWidth="85.0" rotate="90.0" style="-fx-background-color: black;" GridPane.columnIndex="6" GridPane.rowIndex="6">
+
+            <Button fx:id="F6" alignment="CENTER" contentDisplay="CENTER" ellipsisString="" style="-fx-background-color: black;" text="   " textAlignment="CENTER">
+                <font>
+                    <Font size="40.0" />
+                </font>
+            </Button>
+            <ImageView fx:id="f6" fitHeight="85.0" fitWidth="85.0" onMouseClicked="#mouseClickedF6" pickOnBounds="true" preserveRatio="true">
+            </ImageView>
+
+        </StackPane>
+        <StackPane prefHeight="85.0" prefWidth="85.0" rotate="90.0" style="-fx-background-color: white;" GridPane.columnIndex="6" GridPane.rowIndex="7">
+
+            <Button fx:id="G6" alignment="CENTER" contentDisplay="CENTER" ellipsisString="" style="-fx-background-color: white;" text="   " textAlignment="CENTER">
+                <font>
+                    <Font size="40.0" />
+                </font>
+            </Button>
+            <ImageView fx:id="g6" fitHeight="85.0" fitWidth="85.0" onMouseClicked="#mouseClickedG6" pickOnBounds="true" preserveRatio="true">
+            </ImageView>
+
+        </StackPane>
+        <StackPane prefHeight="85.0" prefWidth="85.0" rotate="90.0" style="-fx-background-color: black;" GridPane.columnIndex="6" GridPane.rowIndex="8">
+
+            <Button fx:id="H6" alignment="CENTER" contentDisplay="CENTER" ellipsisString="" style="-fx-background-color: black;" text="   " textAlignment="CENTER">
+                <font>
+                    <Font size="40.0" />
+                </font>
+            </Button>
+            <ImageView fx:id="h6" fitHeight="85.0" fitWidth="85.0" onMouseClicked="#mouseClickedH6" pickOnBounds="true" preserveRatio="true">
+            </ImageView>
+
+        </StackPane>
+        <Label fx:id="I6" alignment="CENTER" ellipsisString="" prefHeight="85.0" prefWidth="85.0" rotate="90.0" text="6" textAlignment="CENTER" GridPane.columnIndex="6" GridPane.rowIndex="9">
+            <font>
+                <Font size="40.0" />
+            </font>
+            <GridPane.margin>
+                <Insets />
+            </GridPane.margin>
+        </Label>
+        <Label fx:id="Z7" alignment="CENTER" ellipsisString="" prefHeight="85.0" prefWidth="85.0" rotate="90.0" text="7" textAlignment="CENTER" GridPane.columnIndex="7">
+            <font>
+                <Font size="40.0" />
+            </font>
+            <GridPane.margin>
+                <Insets />
+            </GridPane.margin>
+        </Label>
+        <StackPane prefHeight="85.0" prefWidth="85.0" rotate="90.0" style="-fx-background-color: black;" GridPane.columnIndex="7" GridPane.rowIndex="1">
+
+            <Button fx:id="A7" alignment="CENTER" contentDisplay="CENTER" ellipsisString="" style="-fx-background-color: black;" text="   " textAlignment="CENTER">
+                <font>
+                    <Font size="40.0" />
+                </font>
+            </Button>
+            <ImageView fx:id="a7" fitHeight="85.0" fitWidth="85.0" onMouseClicked="#mouseClickedA7" pickOnBounds="true" preserveRatio="true">
+
+                <Image url="@../source/blackpawn.png" />
+
+            </ImageView>
+
+        </StackPane>
+        <StackPane prefHeight="85.0" prefWidth="85.0" rotate="90.0" style="-fx-background-color: white;" GridPane.columnIndex="7" GridPane.rowIndex="2">
+
+            <Button fx:id="B7" alignment="CENTER" contentDisplay="CENTER" ellipsisString="" style="-fx-background-color: white;" text="   " textAlignment="CENTER">
+                <font>
+                    <Font size="40.0" />
+                </font>
+            </Button>
+            <ImageView fx:id="b7" fitHeight="85.0" fitWidth="85.0" onMouseClicked="#mouseClickedB7" pickOnBounds="true" preserveRatio="true">
+
+                <Image url="@../source/blackpawn.png" />
+
+            </ImageView>
+
+        </StackPane>
+        <StackPane prefHeight="85.0" prefWidth="85.0" rotate="90.0" style="-fx-background-color: black;" GridPane.columnIndex="7" GridPane.rowIndex="3">
+
+            <Button fx:id="C7" alignment="CENTER" contentDisplay="CENTER" ellipsisString="" style="-fx-background-color: black;" text="   " textAlignment="CENTER">
+                <font>
+                    <Font size="40.0" />
+                </font>
+            </Button>
+            <ImageView fx:id="c7" fitHeight="85.0" fitWidth="85.0" onMouseClicked="#mouseClickedC7" pickOnBounds="true" preserveRatio="true">
+
+                <Image url="@../source/blackpawn.png" />
+
+            </ImageView>
+
+        </StackPane>
+        <StackPane prefHeight="85.0" prefWidth="85.0" rotate="90.0" style="-fx-background-color: white;" GridPane.columnIndex="7" GridPane.rowIndex="4">
+
+            <Button fx:id="D7" alignment="CENTER" contentDisplay="CENTER" ellipsisString="" style="-fx-background-color: white;" text="   " textAlignment="CENTER">
+                <font>
+                    <Font size="40.0" />
+                </font>
+            </Button>
+            <ImageView fx:id="d7" fitHeight="85.0" fitWidth="85.0" onMouseClicked="#mouseClickedD7" pickOnBounds="true" preserveRatio="true">
+
+                <Image url="@../source/blackpawn.png" />
+
+            </ImageView>
+
+        </StackPane>
+        <StackPane prefHeight="85.0" prefWidth="85.0" rotate="90.0" style="-fx-background-color: black;" GridPane.columnIndex="7" GridPane.rowIndex="5">
+
+            <Button fx:id="E7" alignment="CENTER" contentDisplay="CENTER" ellipsisString="" style="-fx-background-color: black;" text="   " textAlignment="CENTER">
+                <font>
+                    <Font size="40.0" />
+                </font>
+            </Button>
+            <ImageView fx:id="e7" fitHeight="85.0" fitWidth="85.0" onMouseClicked="#mouseClickedE7" pickOnBounds="true" preserveRatio="true">
+
+                <Image url="@../source/blackpawn.png" />
+
+            </ImageView>
+
+        </StackPane>
+        <StackPane prefHeight="85.0" prefWidth="85.0" rotate="90.0" style="-fx-background-color: white;" GridPane.columnIndex="7" GridPane.rowIndex="6">
+
+            <Button fx:id="F7" alignment="CENTER" contentDisplay="CENTER" ellipsisString="" style="-fx-background-color: white;" text="   " textAlignment="CENTER">
+                <font>
+                    <Font size="40.0" />
+                </font>
+            </Button>
+            <ImageView fx:id="f7" fitHeight="85.0" fitWidth="85.0" onMouseClicked="#mouseClickedF7" pickOnBounds="true" preserveRatio="true">
+
+                <Image url="@../source/blackpawn.png" />
+
+            </ImageView>
+
+        </StackPane>
+        <StackPane prefHeight="85.0" prefWidth="85.0" rotate="90.0" style="-fx-background-color: black;" GridPane.columnIndex="7" GridPane.rowIndex="7">
+
+            <Button fx:id="G7" alignment="CENTER" contentDisplay="CENTER" ellipsisString="" style="-fx-background-color: black;" text="   " textAlignment="CENTER">
+                <font>
+                    <Font size="40.0" />
+                </font>
+            </Button>
+            <ImageView fx:id="g7" fitHeight="85.0" fitWidth="85.0" onMouseClicked="#mouseClickedG7" pickOnBounds="true" preserveRatio="true">
+
+                <Image url="@../source/blackpawn.png" />
+
+            </ImageView>
+
+        </StackPane>
+        <StackPane prefHeight="85.0" prefWidth="85.0" rotate="90.0" style="-fx-background-color: white;" GridPane.columnIndex="7" GridPane.rowIndex="8">
+
+            <Button fx:id="H7" alignment="CENTER" contentDisplay="CENTER" ellipsisString="" style="-fx-background-color: white;" text="   " textAlignment="CENTER">
+                <font>
+                    <Font size="40.0" />
+                </font>
+            </Button>
+            <ImageView fx:id="h7" fitHeight="85.0" fitWidth="85.0" onMouseClicked="#mouseClickedH7" pickOnBounds="true" preserveRatio="true">
+
+                <Image url="@../source/blackpawn.png" />
+
+            </ImageView>
+
+        </StackPane>
+        <Label fx:id="I7" alignment="CENTER" ellipsisString="" prefHeight="85.0" prefWidth="85.0" rotate="90.0" text="7" textAlignment="CENTER" GridPane.columnIndex="7" GridPane.rowIndex="9">
+            <font>
+                <Font size="40.0" />
+            </font>
+            <GridPane.margin>
+                <Insets />
+            </GridPane.margin>
+        </Label>
+        <Label fx:id="Z8" alignment="CENTER" contentDisplay="CENTER" ellipsisString="" prefHeight="85.0" prefWidth="85.0" rotate="90.0" text="8" textAlignment="CENTER" GridPane.columnIndex="8">
+            <font>
+                <Font size="40.0" />
+            </font>
+            <GridPane.margin>
+                <Insets />
+            </GridPane.margin>
+        </Label>
+        <StackPane prefHeight="85.0" prefWidth="85.0" rotate="90.0" style="-fx-background-color: white;" GridPane.columnIndex="8" GridPane.rowIndex="1">
+
+            <Button fx:id="A8" alignment="CENTER" contentDisplay="CENTER" ellipsisString="" style="-fx-background-color: white;" text="   " textAlignment="CENTER">
+                <font>
+                    <Font size="40.0" />
+                </font>
+            </Button>
+            <ImageView fx:id="a8" fitHeight="85.0" fitWidth="85.0" onMouseClicked="#mouseClickedA8" pickOnBounds="true" preserveRatio="true">
+                <Image url="@../source/blackrook.png" />
+            </ImageView>
+
+        </StackPane>
+        <StackPane prefHeight="85.0" prefWidth="85.0" rotate="90.0" style="-fx-background-color: black;" GridPane.columnIndex="8" GridPane.rowIndex="2">
+
+            <Button fx:id="B8" alignment="CENTER" contentDisplay="CENTER" ellipsisString="" style="-fx-background-color: black;" text="   " textAlignment="CENTER">
+                <font>
+                    <Font size="40.0" />
+                </font>
+            </Button>
+            <ImageView fx:id="b8" fitHeight="85.0" fitWidth="85.0" onMouseClicked="#mouseClickedB8" pickOnBounds="true" preserveRatio="true">
+
+                <Image url="@../source/blackknight.png" />
+
+            </ImageView>
+
+        </StackPane>
+        <StackPane prefHeight="85.0" prefWidth="85.0" rotate="90.0" style="-fx-background-color: white;" GridPane.columnIndex="8" GridPane.rowIndex="3">
+
+            <Button fx:id="C8" alignment="CENTER" contentDisplay="CENTER" ellipsisString="" style="-fx-background-color: white;" text="   " textAlignment="CENTER">
+                <font>
+                    <Font size="40.0" />
+                </font>
+            </Button>
+            <ImageView fx:id="c8" fitHeight="85.0" fitWidth="85.0" onMouseClicked="#mouseClickedC8" pickOnBounds="true" preserveRatio="true">
+
+                <Image url="@../source/blackbishop.png" />
+
+            </ImageView>
+
+        </StackPane>
+        <StackPane prefHeight="85.0" prefWidth="85.0" rotate="90.0" style="-fx-background-color: black;" GridPane.columnIndex="8" GridPane.rowIndex="4">
+
+            <Button fx:id="D8" alignment="CENTER" contentDisplay="CENTER" ellipsisString="" style="-fx-background-color: black;" text="   " textAlignment="CENTER">
+                <font>
+                    <Font size="40.0" />
+                </font>
+            </Button>
+            <ImageView fx:id="d8" fitHeight="85.0" fitWidth="85.0" onMouseClicked="#mouseClickedD8" pickOnBounds="true" preserveRatio="true">
+
+                <Image url="@../source/blackqueen.png" />
+
+            </ImageView>
+
+        </StackPane>
+        <StackPane prefHeight="85.0" prefWidth="85.0" rotate="90.0" style="-fx-background-color: white;" GridPane.columnIndex="8" GridPane.rowIndex="5">
+
+            <Button fx:id="E8" alignment="CENTER" contentDisplay="CENTER" ellipsisString="" style="-fx-background-color: white;" text="   " textAlignment="CENTER">
+                <font>
+                    <Font size="40.0" />
+                </font>
+            </Button>
+            <ImageView fx:id="e8" fitHeight="85.0" fitWidth="85.0" onMouseClicked="#mouseClickedE8" pickOnBounds="true" preserveRatio="true">
+
+                <Image url="@../source/blackking.png" />
+
+            </ImageView>
+
+        </StackPane>
+        <StackPane prefHeight="85.0" prefWidth="85.0" rotate="90.0" style="-fx-background-color: black;" GridPane.columnIndex="8" GridPane.rowIndex="6">
+
+            <Button fx:id="F8" alignment="CENTER" contentDisplay="CENTER" ellipsisString="" style="-fx-background-color: black;" text="   " textAlignment="CENTER">
+                <font>
+                    <Font size="40.0" />
+                </font>
+            </Button>
+            <ImageView fx:id="f8" fitHeight="85.0" fitWidth="85.0" onMouseClicked="#mouseClickedF8" pickOnBounds="true" preserveRatio="true">
+
+                <Image url="@../source/blackbishop.png" />
+
+            </ImageView>
+
+        </StackPane>
+
+        <StackPane prefHeight="85.0" prefWidth="85.0" rotate="90.0" style="-fx-background-color: white;" GridPane.columnIndex="8" GridPane.rowIndex="7">
+
+            <Button fx:id="G8" alignment="CENTER" contentDisplay="CENTER" ellipsisString="" style="-fx-background-color: white;" text="   " textAlignment="CENTER">
+                <font>
+                    <Font size="40.0" />
+                </font>
+            </Button>
+            <ImageView fx:id="g8" fitHeight="85.0" fitWidth="85.0" onMouseClicked="#mouseClickedG8" pickOnBounds="true" preserveRatio="true">
+
+                <Image url="@../source/blackknight.png" />
+
+            </ImageView>
+
+        </StackPane>
+        <StackPane prefHeight="85.0" prefWidth="85.0" rotate="90.0" style="-fx-background-color: black;" GridPane.columnIndex="8" GridPane.rowIndex="8">
+
+            <Button fx:id="H8" alignment="CENTER" contentDisplay="CENTER" ellipsisString="" style="-fx-background-color: black;" text="   " textAlignment="CENTER">
+                <font>
+                    <Font size="40.0" />
+                </font>
+            </Button>
+            <ImageView fx:id="h8" fitHeight="85.0" fitWidth="85.0" onMouseClicked="#mouseClickedH8" pickOnBounds="true" preserveRatio="true">
+
+                <Image url="@../source/blackrook.png" />
+
+            </ImageView>
+
+        </StackPane>
+        <Label fx:id="I8" alignment="CENTER" ellipsisString="" prefHeight="85.0" prefWidth="85.0" rotate="90.0" text="8" textAlignment="CENTER" GridPane.columnIndex="8" GridPane.rowIndex="9">
+            <font>
+                <Font size="40.0" />
+            </font>
+            <GridPane.margin>
+                <Insets />
+            </GridPane.margin>
+        </Label>
+        <Label fx:id="A9" alignment="CENTER" ellipsisString="" prefHeight="60.0" prefWidth="85.0" rotate="90.0" text="A" textAlignment="CENTER" GridPane.columnIndex="9" GridPane.rowIndex="1">
+            <font>
+                <Font size="40.0" />
+            </font>
+            <GridPane.margin>
+                <Insets />
+            </GridPane.margin>
+        </Label>
+        <Label fx:id="B9" alignment="CENTER" ellipsisString="" prefHeight="60.0" prefWidth="85.0" rotate="90.0" text="B" textAlignment="CENTER" GridPane.columnIndex="9" GridPane.rowIndex="2">
+            <font>
+                <Font size="40.0" />
+            </font>
+        </Label>
+        <Label fx:id="C9" alignment="CENTER" ellipsisString="" prefHeight="60.0" prefWidth="85.0" rotate="90.0" text="C" textAlignment="CENTER" GridPane.columnIndex="9" GridPane.rowIndex="3">
+            <font>
+                <Font size="40.0" />
+            </font>
+        </Label>
+        <Label fx:id="D9" alignment="CENTER" ellipsisString="" prefHeight="60.0" prefWidth="85.0" rotate="90.0" text="D" textAlignment="CENTER" GridPane.columnIndex="9" GridPane.rowIndex="4">
+            <font>
+                <Font size="40.0" />
+            </font>
+        </Label>
+        <Label fx:id="E9" alignment="CENTER" ellipsisString="" prefHeight="60.0" prefWidth="85.0" rotate="90.0" text="E" textAlignment="CENTER" GridPane.columnIndex="9" GridPane.rowIndex="5">
+            <font>
+                <Font size="40.0" />
+            </font>
+        </Label>
+        <Label fx:id="F9" alignment="CENTER" ellipsisString="" prefHeight="60.0" prefWidth="85.0" rotate="90.0" text="F" textAlignment="CENTER" GridPane.columnIndex="9" GridPane.rowIndex="6">
+            <font>
+                <Font size="40.0" />
+            </font>
+        </Label>
+        <Label fx:id="G9" alignment="CENTER" ellipsisString="" prefHeight="60.0" prefWidth="85.0" rotate="90.0" text="G" textAlignment="CENTER" GridPane.columnIndex="9" GridPane.rowIndex="7">
+            <font>
+                <Font size="40.0" />
+            </font>
+        </Label>
+        <Label fx:id="H9" alignment="CENTER" ellipsisString="" prefHeight="60.0" prefWidth="60.0" rotate="90.0" text="H" textAlignment="CENTER" GridPane.columnIndex="9" GridPane.rowIndex="8">
+            <font>
+                <Font size="40.0" />
+            </font>
+        </Label>
+        <Button fx:id="reverse2" alignment="CENTER" disable="true" ellipsisString="" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#reverse2" prefHeight="60.0" prefWidth="60.0" rotate="90.0" style="-fx-background-color: orange;" text="↻" textAlignment="CENTER" textFill="BLUE" visible="false" GridPane.columnIndex="9" GridPane.rowIndex="9">
+            <font>
+                <Font size="30.0" />
+            </font>
+            <cursor>
+                <Cursor fx:constant="OPEN_HAND" />
+            </cursor>
+        </Button>
+    </GridPane>
+   <Pane fx:id="windowResult" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="400.0" style="-fx-background-color: #007f7f;" visible="false" StackPane.alignment="CENTER">
+      <children>
+         <Label fx:id="textResult" alignment="TOP_CENTER" contentDisplay="CENTER" ellipsisString="" prefHeight="100.0" prefWidth="400.0" text="White win!" textFill="#ffcc00">
+            <font>
+               <Font size="40.0" />
+            </font>
+         </Label>
+         <Label fx:id="textCondition" alignment="TOP_CENTER" contentDisplay="CENTER" ellipsisString="" layoutY="60.0" prefHeight="100.0" prefWidth="400.0" text="Mate" textFill="#00ccff">
+            <font>
+               <Font size="40.0" />
+            </font>
+         </Label>
+         <Button fx:id="ok" ellipsisString="" layoutX="160.0" layoutY="140.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#hideWindow" prefHeight="40.0" prefWidth="85.0" text="Ok">
+            <font>
+               <Font size="20.0" />
+            </font>
+            <cursor>
+               <Cursor fx:constant="OPEN_HAND" />
+            </cursor>
+         </Button>
+      </children>
+      <StackPane.margin>
+         <Insets />
+      </StackPane.margin>
+   </Pane>
+   <Pane fx:id="promotionBlack" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="85.0" prefWidth="340.0" style="-fx-background-color: #007f7f;" visible="false" StackPane.alignment="BOTTOM_LEFT">
+      <children>
+         <ImageView fx:id="blackqueen" fitHeight="85.0" fitWidth="85.0" onMouseClicked="#chooseQueen" pickOnBounds="true" preserveRatio="true">
+            <image>
+               <Image url="@../source/blackqueen.png" />
+            </image>
+            <cursor>
+               <Cursor fx:constant="HAND" />
+            </cursor>
+         </ImageView>
+         <ImageView fx:id="blackrook" fitHeight="85.0" fitWidth="85.0" layoutX="85.0" onMouseClicked="#chooseRook" pickOnBounds="true" preserveRatio="true">
+            <image>
+               <Image url="@../source/blackrook.png" />
+            </image>
+            <cursor>
+               <Cursor fx:constant="HAND" />
+            </cursor>
+         </ImageView>
+         <ImageView fx:id="blackbishop" fitHeight="85.0" fitWidth="85.0" layoutX="170.0" onMouseClicked="#chooseBishop" pickOnBounds="true" preserveRatio="true">
+            <image>
+               <Image url="@../source/blackbishop.png" />
+            </image>
+            <cursor>
+               <Cursor fx:constant="HAND" />
+            </cursor>
+         </ImageView>
+         <ImageView fx:id="blackknight" fitHeight="85.0" fitWidth="85.0" layoutX="255.0" onMouseClicked="#chooseKnight" pickOnBounds="true" preserveRatio="true">
+            <image>
+               <Image url="@../source/blackknight.png" />
+            </image>
+            <cursor>
+               <Cursor fx:constant="HAND" />
+            </cursor>
+         </ImageView>
+      </children>
+      <StackPane.margin>
+         <Insets left="230.0" />
+      </StackPane.margin>
+   </Pane>
+   <Pane fx:id="promotionWhite" layoutX="240.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="85.0" prefWidth="340.0" style="-fx-background-color: #007f7f;" visible="false" StackPane.alignment="TOP_LEFT">
+      <children>
+         <ImageView fx:id="whitequeen" fitHeight="85.0" fitWidth="85.0" onMouseClicked="#chooseQueen" pickOnBounds="true" preserveRatio="true">
+            <image>
+               <Image url="@../source/whitequeen.png" />
+            </image>
+            <cursor>
+               <Cursor fx:constant="HAND" />
+            </cursor>
+         </ImageView>
+         <ImageView fx:id="whiterook" fitHeight="85.0" fitWidth="85.0" layoutX="85.0" onMouseClicked="#chooseRook" pickOnBounds="true" preserveRatio="true">
+            <image>
+               <Image url="@../source/whiterook.png" />
+            </image>
+            <cursor>
+               <Cursor fx:constant="HAND" />
+            </cursor>
+         </ImageView>
+         <ImageView fx:id="whitebishop" fitHeight="85.0" fitWidth="85.0" layoutX="170.0" onMouseClicked="#chooseBishop" pickOnBounds="true" preserveRatio="true">
+            <image>
+               <Image url="@../source/whitebishop.png" />
+            </image>
+            <cursor>
+               <Cursor fx:constant="HAND" />
+            </cursor>
+         </ImageView>
+         <ImageView fx:id="whiteknight" fitHeight="85.0" fitWidth="85.0" layoutX="255.0" onMouseClicked="#chooseKnight" pickOnBounds="true" preserveRatio="true">
+            <image>
+               <Image url="@../source/whiteknight.png" />
+            </image>
+            <cursor>
+               <Cursor fx:constant="HAND" />
+            </cursor>
+         </ImageView>
+      </children>
+      <StackPane.margin>
+         <Insets left="230.0" />
+      </StackPane.margin>
+   </Pane>
+</StackPane>

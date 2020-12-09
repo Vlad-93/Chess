@@ -1,2 +1,3 @@
 # hello-world
-Repository Hello World
+
+This is repository for code on Java
